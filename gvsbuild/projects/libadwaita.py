@@ -48,6 +48,7 @@ class Libadwaita(Tarball, Meson):
         self.add_param(f"-Dintrospection={gir}")
         self.add_param("-Dgtk_doc=false")
         self.add_param("-Dvapi=false")
+        self.add_param("-Dtests=false")
 
     def build(self, **kwargs):
         Meson.build(self, make_tests=True)
